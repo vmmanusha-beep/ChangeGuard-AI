@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Environment / secrets - NEVER commit these
+.env
+*.env
+!.env.example
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+
+# Distribution
+dist/
+build/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+backend/.env
+backend/.venv/
+frontend/node_modules/
+__pycache__/
+*.pyc
