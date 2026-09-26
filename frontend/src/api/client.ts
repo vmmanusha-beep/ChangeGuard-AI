@@ -49,17 +49,17 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
 
 export const api = {
   analyze(diff: string, title: string): Promise<AnalyzeResponse> {
-    return request<AnalyzeResponse>('/api/analyze', {
+    return request<AnalyzeResponse>('https://changeguard-ai-backend-jcxk.onrender.com/api/analyze', {
       method: 'POST',
       body: JSON.stringify({ diff, title }),
     })
   },
 
   listReports(): Promise<ReportListItem[]> {
-    return request<ReportListItem[]>('/api/reports')
+    return request<ReportListItem[]>('https://changeguard-ai-backend-jcxk.onrender.com/api/reports')
   },
 
   getReport(id: number): Promise<AnalyzeResponse> {
-    return request<AnalyzeResponse>(`/api/reports/${id}`)
+    return request<AnalyzeResponse>(`https://changeguard-ai-backend-jcxk.onrender.com/api/reports/${id}`)
   },
 }
